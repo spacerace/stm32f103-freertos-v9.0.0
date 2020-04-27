@@ -101,7 +101,7 @@ SECTIONS
     The program executes knowing that the data is in the RAM
     but the loader puts the initial values in the FLASH (inidata).
     It is one task of the startup to copy the initial values from FLASH to RAM. */
-    .data  : AT ( _sidata )
+    .data  : AT ( _sidata + 1024)
     {
 	    . = ALIGN(4);
         /* This is used by the startup in order to initialize the .data secion */
